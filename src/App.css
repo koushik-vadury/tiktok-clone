@@ -1,0 +1,77 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+
+.app_videos {
+  position: relative;
+  height: 600px;
+  border-radius: 1rem;
+  overflow: scroll;
+  width: 80%;
+  max-width: 500px;
+  scroll-snap-type: y mandatory;
+}
+
+.app_videos::-webkit-scrollbar {
+  display: none;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  scroll-snap-align: start;
+}
+
+.video_player {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.videoFooter {
+  position: relative;
+  bottom: 180px;
+  margin-left: 3rem;
+  display: flex;
+  color: white;
+}
+
+.videoFooter_text {
+  flex: 1;
+}
+
+.videoSideBar {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  color: white;
+}
+.videoSideBar_Button {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.videoSideBar_Button p {
+  margin-top: 0px;
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.videoSideBar_Button .rounded {
+  animation: circle 0.5s infinite;
+}
